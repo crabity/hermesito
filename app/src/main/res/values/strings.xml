@@ -4,5 +4,19 @@
     <string name="app_name">Hermesito</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content"></string>
+    <string name="main_add">Add Transaction</string>
+    <string name="main_stat">See Snapshot</string>
+    <string name="title_activity_transaction">Add a Transaction</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="transaction_date">Date: </string>
+    <string name="transaction_time">Time: </string>
+    <string name="transaction_location">Location: </string>
+    <string name="transaction_item">Item(s): </string>
+    <string name="transaction_add_item">+</string>
+    <string name="transaction_subtotal">Subtotal: </string>
+    <string name="transaction_tax">Tax: </string>
+    <string name="transaction_tip">Tip: </string>
+    <string name="transaction_total">Total: </string>
 
 </resources>

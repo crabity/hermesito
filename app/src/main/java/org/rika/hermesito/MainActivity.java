@@ -4,11 +4,13 @@ import org.rika.hermesito.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 
 /**
@@ -34,7 +36,7 @@ public class MainActivity extends Activity {
      * If set, will toggle the system UI visibility upon interaction. Otherwise,
      * will show the system UI visibility upon interaction.
      */
-    private static final boolean TOGGLE_ON_CLICK = true;
+    private static final boolean TOGGLE_ON_CLICK = false;
 
     /**
      * The flags to pass to {@link SystemUiHider#getInstance}.
@@ -101,11 +103,11 @@ public class MainActivity extends Activity {
         contentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TOGGLE_ON_CLICK) {
-                    mSystemUiHider.toggle();
-                } else {
-                    mSystemUiHider.show();
-                }
+//                if (TOGGLE_ON_CLICK) {
+//                    mSystemUiHider.toggle();
+//                } else {
+//                    mSystemUiHider.show();
+//                }
             }
         });
 
@@ -113,6 +115,10 @@ public class MainActivity extends Activity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+        Profile profile = Profile.getInstance(getApplicationContext());
+        TextView welcome_msg = (TextView) findViewById(R.id.welcome_msg);
+        welcome_msg.setText("Welcome, " + profile.getUser_name() + " !");
     }
 
     @Override
@@ -156,5 +162,10 @@ public class MainActivity extends Activity {
     private void delayedHide(int delayMillis) {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
+    }
+
+    public void addTransaction(View v){
+        Intent intent = new Intent(this, Transaction.class);
+        startActivity(intent);
     }
 }
