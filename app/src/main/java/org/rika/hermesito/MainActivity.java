@@ -165,7 +165,7 @@ public class MainActivity extends Activity {
     }
 
     public void addTransaction(View v){
-        Intent intent = new Intent(this, Transaction.class);
+        Intent intent = new Intent(this, TransactionActivity.class);
         startActivity(intent);
     }
 }

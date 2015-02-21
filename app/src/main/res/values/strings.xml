@@ -14,9 +14,13 @@
     <string name="transaction_location">Location: </string>
     <string name="transaction_item">Item(s): </string>
     <string name="transaction_add_item">+</string>
+    <string name="transaction_add_datetime">...</string>
     <string name="transaction_subtotal">Subtotal: </string>
     <string name="transaction_tax">Tax: </string>
     <string name="transaction_tip">Tip: </string>
     <string name="transaction_total">Total: </string>
+    <string name="transaction_acct">Paid with: </string>
+    <string name="transaction_submit">Submit</string>
+    <string name="transaction_cancel">Cancel</string>
 
 </resources>
